@@ -22,6 +22,13 @@
     <meta name="twitter:title" content="Daniyal Faisal – AI Video Ads for Fashion Brands">
     <meta name="twitter:description" content="AI-powered ASMR, Commercial & UGC video ads for fashion & beauty brands in Pakistan.">
 
+    <!-- Favicon - face only crop -->
+    <link rel="icon" type="image/webp" href="https://res.cloudinary.com/ubahvkw0/image/upload/c_thumb,g_face,w_128,h_128,f_auto,q_auto/v1791580032/portrait_optimized_quality_1.webp">
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/ubahvkw0/image/upload/c_thumb,g_face,w_180,h_180,f_auto,q_auto/v1791580032/portrait_optimized_quality_1.webp">
+
+    <!-- Preload critical hero image -->
+    <link rel="preload" as="image" href="https://res.cloudinary.com/ubahvkw0/image/upload/f_auto,q_auto,w_900/v1791580032/portrait_optimized_quality_1.webp">
+
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
@@ -35,7 +42,8 @@
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "PK"
-      }
+      },
+      "image": "https://res.cloudinary.com/ubahvkw0/image/upload/v1791580032/portrait_optimized_quality_1.webp"
     }
     </script>
     <style>
@@ -597,6 +605,21 @@
             inset: 0;
             background: radial-gradient(circle at center, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
             pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Bottom black gradient to hide watermark */
+        .carousel-item::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 28%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.45) 40%, transparent 100%);
+            pointer-events: none;
+            z-index: 2;
+            border-radius: 0 0 16px 16px;
         }
 
         .carousel-item.pos-center {
@@ -1135,11 +1158,10 @@
             </div>
             <div class="hero-image-float">
                 <div class="hero-image" id="heroImage">
-                    <img src="https://res.cloudinary.com/ubahvkw0/image/upload/f_auto,q_auto/portrait_optimized_quality_1
-                        " alt="Daniyal Faisal - AI Video Producer for Fashion Brands" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <img src="https://res.cloudinary.com/ubahvkw0/image/upload/f_auto,q_auto,w_900/v1791580032/portrait_optimized_quality_1.webp" alt="Daniyal Faisal - AI Video Producer for Fashion Brands" width="900" height="1200" loading="eager" fetchpriority="high" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div style="display:none; width:100%; height:100%; align-items:center; justify-content:center; text-align: center; color: var(--text-secondary); flex-direction: column; gap: 10px;">
                         <span style="font-size:28px;">🎬</span>
-                        <span>Add your portrait / showreel here</span>
+                        <span>Daniyal Faisal</span>
                     </div>
                 </div>
             </div>
@@ -1155,7 +1177,7 @@
 
             <div class="service-row">
 <div class="service-media">
-    <img src="https://res.cloudinary.com/fjrk5par/image/upload/v1784582652/Gemini_Generated_Image_ef40tdef40tdef40_pf1jrv.png" alt="Daniyal Faisal Commercial AI Video Ad example for fashion brands" style="width:100%; height:100%; object-fit:cover;">
+    <img src="https://res.cloudinary.com/ubahvkw0/image/upload/f_auto,q_auto,w_700/v1791737394/hijab_portrait_under_50kb.webp" alt="Daniyal Faisal Commercial AI Video Ad for fashion brands" style="width:100%; height:100%; object-fit:cover;" loading="lazy" width="700" height="900">
 </div>                <div class="service-text">
                     <h3><span class="gradient-inline">Commercial</span> Ads</h3>
                     <p>Polished, brand-first videos that showcase your product with cinematic quality — built to run as your hero ad across Meta & TikTok.</p>
@@ -1169,7 +1191,7 @@
 
             <div class="service-row reverse">
 <div class="service-media">
-    <img src="https://res.cloudinary.com/fjrk5par/image/upload/v1784583153/Gemini_Generated_Image_bkoejtbkoejtbkoe_fh1swf.png" alt="Daniyal Faisal ASMR product video example" style="width:100%; height:100%; object-fit:cover;">
+    <img src="https://res.cloudinary.com/ubahvkw0/image/upload/f_auto,q_auto,w_700/v1791737387/abaya_compressed_under_50kb_1.webp" alt="Daniyal Faisal ASMR product video example" style="width:100%; height:100%; object-fit:cover;" loading="lazy" width="700" height="900">
 </div>                <div class="service-text">
                     <h3><span class="gradient-inline">ASMR</span> Videos</h3>
                     <p>Sensory, satisfying, scroll-stopping content that keeps people watching till the end — proven to lift engagement and stop the scroll.</p>
@@ -1183,7 +1205,7 @@
 
             <div class="service-row">
 <div class="service-media">
-    <img src="https://res.cloudinary.com/fjrk5par/image/upload/v1784583118/0607_1_-Cover_mdck1t.jpg" alt="Commercial ad example" style="width:100%; height:100%; object-fit:cover;">
+    <img src="https://res.cloudinary.com/ubahvkw0/image/upload/f_auto,q_auto,w_700/v1791734341/velmora_full_resolution_under_50kb.webp" alt="Daniyal Faisal UGC style ad example for beauty brands" style="width:100%; height:100%; object-fit:cover;" loading="lazy" width="700" height="900">
 </div>                <div class="service-text">
                     <h3><span class="gradient-inline">UGC</span> Style Ads</h3>
                     <p>Authentic, creator-style videos that feel native to the feed — perfect for A/B testing angles without breaking the budget.</p>
@@ -1206,36 +1228,42 @@
 
             <div class="carousel-container">
                 <div class="carousel" id="carousel">
-<div class="carousel-item" data-format="ASMR">
-    <video loop playsinline style="width:100%; height:100%; object-fit:cover;">
-        <source src="https://res.cloudinary.com/fjrk5par/video/upload/v1784584311/asmr_abaya_video_l8gbfr.mp4" type="video/mp4">
-    </video>
-    <div class="play-overlay"><div class="play-icon">▶</div></div>
-</div> 
-<div class="carousel-item" data-format="ASMR">
-    <video loop playsinline style="width:100%; height:100%; object-fit:cover;">
-        <source src="https://res.cloudinary.com/fjrk5par/video/upload/v1784588034/0607_1_ha0cdc.mp4" type="video/mp4">
+<div class="carousel-item" data-format="Video">
+    <video loop playsinline preload="none" muted poster="https://res.cloudinary.com/ubahvkw0/image/upload/f_auto,q_auto,w_500/v1791737394/hijab_portrait_under_50kb.webp" style="width:100%; height:100%; object-fit:cover;">
+        <source src="https://res.cloudinary.com/ubahvkw0/video/upload/q_auto:eco,w_600/v1791737620/head-shape-pillow-final-video_gf9fszmk.mp4" type="video/mp4">
     </video>
     <div class="play-overlay"><div class="play-icon">▶</div></div>
 </div>
-<div class="carousel-item" data-format="ASMR">
-    <video loop playsinline style="width:100%; height:100%; object-fit:cover;">
-        <source src="https://res.cloudinary.com/fjrk5par/video/upload/v1784588001/The_hijab_Commercial_sxqe86.mp4" type="video/mp4">
+<div class="carousel-item" data-format="Video">
+    <video loop playsinline preload="none" muted poster="https://res.cloudinary.com/ubahvkw0/image/upload/f_auto,q_auto,w_500/v1791737387/abaya_compressed_under_50kb_1.webp" style="width:100%; height:100%; object-fit:cover;">
+        <source src="https://res.cloudinary.com/ubahvkw0/video/upload/q_auto:eco,w_600/v1791737552/Clean_skin_real_results_Elaris_7_Face_Wash_personally_tested_approved_Main_khud_isay_use.mp4" type="video/mp4">
     </video>
     <div class="play-overlay"><div class="play-icon">▶</div></div>
 </div>
-<div class="carousel-item" data-format="ASMR">
-    <video loop playsinline style="width:100%; height:100%; object-fit:cover;">
-        <source src="https://res.cloudinary.com/fjrk5par/video/upload/v1784588103/BABY_BED_RAIL_FINAL_VIDEO_eh89gh.mp4" type="video/mp4">
+<div class="carousel-item" data-format="Video">
+    <video loop playsinline preload="none" muted poster="https://res.cloudinary.com/ubahvkw0/image/upload/f_auto,q_auto,w_500/v1791734341/velmora_full_resolution_under_50kb.webp" style="width:100%; height:100%; object-fit:cover;">
+        <source src="https://res.cloudinary.com/ubahvkw0/video/upload/q_auto:eco,w_600/v1791737780/0607-1_ziNDWjs4.mp4" type="video/mp4">
     </video>
     <div class="play-overlay"><div class="play-icon">▶</div></div>
 </div>
-<div class="carousel-item" data-format="ASMR">
-    <video loop playsinline style="width:100%; height:100%; object-fit:cover;">
-        <source src="https://res.cloudinary.com/fjrk5par/video/upload/v1784588245/vaseline_final_video_ugc_n5kr0k.mp4" type="video/mp4">
+<div class="carousel-item" data-format="Video">
+    <video loop playsinline preload="none" muted poster="https://res.cloudinary.com/ubahvkw0/image/upload/f_auto,q_auto,w_500/v1791737394/hijab_portrait_under_50kb.webp" style="width:100%; height:100%; object-fit:cover;">
+        <source src="https://res.cloudinary.com/ubahvkw0/video/upload/q_auto:eco,w_600/v1791737739/baby-bed-rail-final-video_85P2Orwx.mp4" type="video/mp4">
     </video>
     <div class="play-overlay"><div class="play-icon">▶</div></div>
-</div> 
+</div>
+<div class="carousel-item" data-format="Video">
+    <video loop playsinline preload="none" muted poster="https://res.cloudinary.com/ubahvkw0/image/upload/f_auto,q_auto,w_500/v1791737387/abaya_compressed_under_50kb_1.webp" style="width:100%; height:100%; object-fit:cover;">
+        <source src="https://res.cloudinary.com/ubahvkw0/video/upload/q_auto:eco,w_600/v1791737678/asmr-abaya-video_zcQBAYYm.mp4" type="video/mp4">
+    </video>
+    <div class="play-overlay"><div class="play-icon">▶</div></div>
+</div>
+<div class="carousel-item" data-format="Video">
+    <video loop playsinline preload="none" muted poster="https://res.cloudinary.com/ubahvkw0/image/upload/f_auto,q_auto,w_500/v1791734341/velmora_full_resolution_under_50kb.webp" style="width:100%; height:100%; object-fit:cover;">
+        <source src="https://res.cloudinary.com/ubahvkw0/video/upload/q_auto:eco,w_600/v1791737650/the-hijab-commercial_5ShsQ753.mp4" type="video/mp4">
+    </video>
+    <div class="play-overlay"><div class="play-icon">▶</div></div>
+</div>
 </div>
                 <button class="arrow left" onclick="prevSlide(); restartAutoLoop();">❮</button>
                 <button class="arrow right" onclick="nextSlide(); restartAutoLoop();">❯</button>
@@ -1358,32 +1386,32 @@
 
             <div class="contact-section">
                 <form class="contact-form" onsubmit="handleSubmit(event)">
-                        <input type="hidden" name="access_key" value=85ade049-5513-4717-96dd-41b557ce5559   >
+                        <input type="hidden" name="access_key" value="e4f589f9-1fb8-4a0b-8958-ebc70d557006">
                     <div class="form-row">
                         <div class="form-group">
                             <label>Brand Name</label>
-                            <input type="text" placeholder="Your brand name" required>
+                            <input type="text" name="brand_name" placeholder="Your brand name" required>
                         </div>
                         <div class="form-group">
                             <label>Contact Person</label>
-                            <input type="text" placeholder="Your name" required>
+                            <input type="text" name="name" placeholder="Your name" required>
                         </div>
                     </div>
                     
                     <div class="form-row">
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" placeholder="your@email.com" required>
+                            <input type="email" name="email" placeholder="your@email.com" required>
                         </div>
                         <div class="form-group">
                             <label>WhatsApp / Phone</label>
-                            <input type="tel" placeholder="+92 300 0000000" required>
+                            <input type="tel" name="phone" placeholder="+92 300 0000000" required>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label>What's your main challenge right now?</label>
-                        <textarea placeholder="Are you struggling with expensive production? Low engagement on ads? Need to scale quickly?" required></textarea>
+                        <textarea name="message" placeholder="Are you struggling with expensive production? Low engagement on ads? Need to scale quickly?" required></textarea>
                     </div>
 
                     <button type="submit" class="cta-button form-submit">Send Message</button>
